@@ -14,7 +14,7 @@ This is a MCP (Model Context Provider) server for BNM (Bank Negara Malaysia) Ope
 STDIO servers are provided for different platforms:
 - MacOS: [`build/darwin_arm64/bmn-mcp`](build/darwin_arm64/bnm-mcp)
 - Linux: [`build/linux_amd64/bnm-mcp`](build/linux_amd64/bnm-mcp)
-- Windows: [`build/windows_amd64/bnm-mcp`](build/windows_amd64/bnm-mcp)
+- Windows: [`build/windows_amd64/bnm-mcp.exe`](build/windows_amd64/bnm-mcp.exe)
 
 Sample JSON configuration for MCP clients (e.g. Claude Desktop, Cherry Studio):
 ```json

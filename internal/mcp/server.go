@@ -3,8 +3,10 @@ package mcp
 import (
 	"context"
 	"fmt"
+	"net/http"
 
-	"github.com/hongster/bnm-mcp/internal/bnm/api/consumeralert"
+	"github.com/hongster/bnm-mcp/internal/bnm"
+	"github.com/hongster/bnm-mcp/internal/bnm/consumeralert"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )
@@ -27,7 +29,8 @@ func NewServer() *server.MCPServer {
 
 	// Financial Consumer Alert handler
 	mcpServer.AddTool(consumerAlert, func(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
-		companies, err := consumeralert.Request()
+		api := bnm.NewAPI(&http.Client{})
+		companies, err := consumeralert.Request(api)
 		if err != nil {
 			return mcp.NewToolResultError(fmt.Sprintf("unable to query BNM API: %s", err)), nil
 		}
