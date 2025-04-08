@@ -16,7 +16,7 @@ func NewServer() *server.MCPServer {
 	// TODO start server in SSE and STDIO mode
 	mcpServer := server.NewMCPServer(
 		"Bank Negara Malaysia MCP",
-		"1.0.0",
+		"0.1.0",
 		server.WithResourceCapabilities(true, true),
 		server.WithLogging(),
 	)
