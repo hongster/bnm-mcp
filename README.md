@@ -7,7 +7,8 @@ This is a MCP (Model Context Provider) server for BNM (Bank Negara Malaysia) Ope
 # MCP Tools
 
 - Financial Consumer Alert
-- *More coming soon...*
+- Exchange Rate
+- *more coming soon...*
 
 # Getting Started
 
@@ -31,7 +32,25 @@ Sample JSON configuration for MCP clients (e.g. Claude Desktop, Cherry Studio):
 
 # Development
 
-*TODO*
+## Prerequisites
+
+- Go 1.24
+- Make
+
+## Build & Run
+
+Get the source code
+```bash
+git clone git@github.com:hongster/bnm-mcp.git
+cd bnm-mcp
+```
+
+Build the project (for MacOS, Linux, Windows)
+```bash 
+make build
+```
+
+STDIO servers are available in the `build` directory.
 
 # License
 

@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/hongster/bnm-mcp/internal/bnm/consumeralert"
+	"github.com/hongster/bnm-mcp/internal/bnm/exchangerate"
 	"github.com/mark3labs/mcp-go/server"
 )
 
@@ -12,7 +13,7 @@ func NewServer() *server.MCPServer {
 	// TODO start server in SSE and STDIO mode
 	mcpServer := server.NewMCPServer(
 		"Bank Negara Malaysia MCP",
-		"0.1.0",
+		"0.2.0",
 		server.WithResourceCapabilities(true, true),
 		server.WithLogging(),
 	)
@@ -20,6 +21,7 @@ func NewServer() *server.MCPServer {
 	// Register tools
 	registerFuncs := []RegisterFunc{
 		consumeralert.Register,
+		exchangerate.Register,
 	}
 	for _, registerFunc := range registerFuncs {
 		err := registerFunc(mcpServer)

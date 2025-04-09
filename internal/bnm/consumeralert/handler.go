@@ -9,7 +9,7 @@ import (
 	"github.com/mark3labs/mcp-go/mcp"
 )
 
-// MCP tool's handler.
+// Execute API request to get list of companies on watch list.
 func Handler(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
 	api := bnm.NewAPI(&http.Client{})
 	companies, err := Request(api)
