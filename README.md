@@ -2,7 +2,7 @@
 
 This is a MCP (Model Context Provider) server for BNM (Bank Negara Malaysia) OpenAPI. It only covers a subset of the BNM API.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7lVRyodWdSI?si=oeJUHbqdBukt1zZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Demo video](https://img.youtube.com/vi/7lVRyodWdSI/0.jpg)](https://youtu.be/7lVRyodWdSI?si=WJq1GPv9d-hfg72z)
 
 **DISCLAIMER: This project is neither affiliated with BNM nor endorsed by BNM.**
 
